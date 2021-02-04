@@ -1,0 +1,55 @@
+
+Enter number of steps: 5
+Enter number of experiments to run: 1
+Steps=5 Experiment times= 1 Distance= 1.0
+
+10 steps: 2.668689099686257 over 10 experiments
+20 steps: 4.569220430675036 over 10 experiments
+30 steps: 4.229319170237934 over 10 experiments
+40 steps: 4.323841020994475 over 10 experiments
+50 steps: 5.267338381962523 over 10 experiments
+60 steps: 7.433185132902521 over 10 experiments
+70 steps: 8.720093707432435 over 10 experiments
+80 steps: 6.651273399818242 over 10 experiments
+90 steps: 11.084643321600561 over 10 experiments
+100 steps: 9.372830695325806 over 10 experiments
+150 steps: 14.426029456464576 over 10 experiments
+
+1 steps: 1.0 over 10 experiments
+10 steps: 2.4201609622624 over 10 experiments
+100 steps: 9.553393990671696 over 10 experiments
+1000 steps: 20.505862668533513 over 10 experiments
+10000 steps: 84.55987290922414 over 10 experiments
+100000 steps: 288.8052623964156 over 10 experiments
+1000000 steps: 937.1798862657681 over 10 experiments
+
+1 steps: 1.0 over 100 experiments
+2 steps: 1.0846803743153537 over 100 experiments
+
+10000 steps: 94.63485982902219 over 100 experiments
+20000 steps: 127.05893842195468 over 100 experiments
+30000 steps: 161.39758242326886 over 100 experiments
+40000 steps: 169.35409380581652 over 100 experiments
+50000 steps: 186.41502010139754 over 100 experiments
+60000 steps: 228.3067081703704 over 100 experiments
+70000 steps: 229.3704517061092 over 100 experiments
+80000 steps: 239.7809214045815 over 100 experiments
+90000 steps: 285.19347089770645 over 100 experiments
+
+100000 steps: 250.6654053364581 over 100 experiments
+
+4 steps: 1.7552828442203123 over 1000 experiments
+9 steps: 2.742382359601395 over 1000 experiments
+16 steps: 3.6238108627196666 over 1000 experiments
+25 steps: 4.348430087503101 over 1000 experiments
+
+
+100 steps: 9.381086813642714 over 10 experiments
+50 steps: 7.162142431621142 over 10 experiments
+100 steps: 9.448465772178157 over 10 experiments
+100 steps: 11.818583077971706 over 10 experiments
+150 steps: 10.637809207875435 over 10 experiments
+200 steps: 11.499303227845832 over 10 experiments
+300 steps: 18.642136597147104 over 10 experiments
+400 steps: 23.10182580215125 over 10 experiments
+500 steps: 18.29251645492679 over 10 experiments

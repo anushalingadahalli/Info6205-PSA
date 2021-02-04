@@ -1,0 +1,17 @@
+1 steps: 1.0 over 10 experiments
+50 steps: 4.481589717869236 over 10 experiments
+100 steps: 9.281894317227001 over 10 experiments
+150 steps: 7.2794777611901464 over 10 experiments
+200 steps: 13.548711565993646 over 10 experiments
+250 steps: 12.44912729576699 over 10 experiments
+300 steps: 11.202770549894733 over 10 experiments
+350 steps: 15.285238110455861 over 10 experiments
+400 steps: 20.444851886573684 over 10 experiments
+450 steps: 17.020961627066676 over 10 experiments
+500 steps: 21.58914120847671 over 10 experiments
+
+1000 steps: 26.603953349535686 over 10 experiments
+2000 steps: 36.84723369564712 over 10 experiments
+3000 steps: 42.55722986963976 over 10 experiments
+4000 steps: 45.7865318532952 over 10 experiments
+5000 steps: 42.557777198064144 over 10 experiments
