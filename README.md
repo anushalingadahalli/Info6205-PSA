@@ -1,3 +1,3 @@
 # Info6205-PSA
 
-#Repository for PSA Assignments 
+Repository for PSA Assignments 
