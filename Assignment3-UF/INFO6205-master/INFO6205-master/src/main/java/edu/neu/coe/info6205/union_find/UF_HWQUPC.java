@@ -178,18 +178,22 @@ public class UF_HWQUPC implements UF {
 
     private void mergeComponents(int i, int j) {
         // TO BE IMPLEMENTED make shorter root point to taller one
-
-     if(height[i]<height[j])
+        int p = find(i);
+        int q = find(j);
+        if(p == q) {
+            return;
+        }
+     if(height[p]<height[q])
      {
       //parent[i]=j;
-         updateParent(i,j);
-      height[j]+=height[i];
+         updateParent(p,q);
+      height[q]+=height[p];
      }
      else
     {
       //parent[j]=i;
-        updateParent(j,i);
-      height[i]+=height[j];
+        updateParent(q,p);
+      height[p]+=height[q];
     }
     }
 
@@ -201,6 +205,7 @@ public class UF_HWQUPC implements UF {
 
             parent[i] = parent[parent[i]];
 
+
     }
     public static int count(int n)
     {
@@ -209,27 +214,27 @@ public class UF_HWQUPC implements UF {
         UF_HWQUPC uf = new UF_HWQUPC(n);
 
         int  counts = 0;
-        System.out.println(uf.size());
+
         loopthis:
         while ( uf.count> 1)
         {
 
-            int p = random.nextInt(n);
+            int p = random.nextInt(n);                               //Generate random number pairs p and q
             int q = random.nextInt(n);
             if(p==q) {continue loopthis;}
-            if (!uf.connected(p, q))
+            if (!uf.connected(p, q))                                 //Check if the pairs are connected
             {
-                uf.union(p, q);
+                uf.union(p, q);                                      //If not connected then call union method for the pair
             }
-            counts++;
+            counts++;                                                //Count the number of connected components made
 
 
         }
-        System.out.println("countsis"+counts);
+
         return counts;
     }
     public static void main(String[] args) {
-        System.out.println("this is output of unionfind");
+        /*System.out.println("this is output of unionfind");
         int[] n = {100,200,300,400};
 
         int[] count = new int[5] ;
@@ -249,6 +254,29 @@ public class UF_HWQUPC implements UF {
         for(int i=0;i<n.length;i++)
         {
             System.out.println("n=: "+n[i]+"  count=: "+count[i]+"  0.5nln(n)=: "+0.5 * n[i]* Math.log(n[i]));
+        }*/
+        int runs = 100; 											//Number of times the count() function called for value of n
+        double coefficient = 0;										//Variable to average the value of m/n*(log(n))
+        int expCount = 0;										    //Number of experiments conducted for these runs
+
+        for(int i = 100; i <= 5000; i= i+250) {                      //iterate over for n = 100 to n = 5000 incrementing by 250
+
+            int totalCount = 0;			                            // cumulative sum of generated pairs from count(n) function
+            for(int j = 0; j < runs; j++) {
+                totalCount+= count(i);
+
+            }
+
+            expCount++;
+            int avg = totalCount/runs;		                        //Average value of pairs generated over the number of runs
+
+            double logFactor = Math.log(i) * i;
+            coefficient += avg/logFactor;
+
+            System.out.println("For n= " + i + "  number of generated pairs = " + avg + " for "  + runs +  " runs");
+            System.out.println("Coefficient for n=" + i + "  and m = " + avg + " is= " +  (avg/logFactor) + "\n");
         }
+
+        System.out.println("Average value of the coefficient (m/n*log(n)) is=" + (coefficient/expCount));
     }
 }
